@@ -7,7 +7,7 @@ library(RMySQL)
 
 
 #make a conncetion to the database, send querys and recieve the relevant data
-con <- dbConnect(RMySQL::MySQL(), dbname = "houses", user="root", password="10038Sh1mSh4m")
+con <- dbConnect(RMySQL::MySQL(), dbname = "houses", user="root", password="password", host="127.0.0.1", port=3306)
 
 rs1 <- dbSendQuery(con, "select houses.id, neighborhood.neighborhood, exterior_quality.quality, kitchen_quality.quality, overallQual, totalbsmtsf, grlivingarea, totalrooms, totalcars, 
 yearsSinceRemod, garagearea, fullBath, bsmtFullBath, halfBath
